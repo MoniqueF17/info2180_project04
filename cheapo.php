@@ -11,7 +11,7 @@ $results = mysql_query($sql);
 $arr = mysql_fetch_array($results);
 $arr_size = sizeof($arr); 
   if ($arr_size > 1){ 
-   print "welcome, you got in"; 
+   print "welcome, you got in <a href="home.html">click here to proceed</a>; 
  } 
  else { 
     print "sorry wrong password";  
