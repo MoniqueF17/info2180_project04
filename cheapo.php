@@ -1,19 +1,24 @@
 <?php
 
 
-mysql_connect("localhost", "root");
+mysql_connect("localhost", "root","");
 mysql_select_db("register");
 $username = $_POST['username']; 
 $password = $_POST['password']; 
 
-$sql = SELECT * FROM register WHERE username = '$username' AND password = '$password';
+$sql = "SELECT * FROM register WHERE username = '$username' AND password = '$password'";
 $results = mysql_query($sql);
 $arr = mysql_fetch_array($results);
-$arr_size = sizeof($arr); 
-  if ($arr_size > 1){ 
-   print "welcome, you got in <a href="home.html">click here to proceed</a>; 
+/*$arr_size = sizeof($arr);*/
+  if ($arr > 1){ 
+   ?>
+   <p>Welcome, you have succesfully logged</p>
+   <a href="homepage.html">click here to proceed</a>
+   <?php
+   
  } 
  else { 
-    print "sorry wrong password";  
-
+    print "sorry wrong password";
+	
+ }
 ?>
