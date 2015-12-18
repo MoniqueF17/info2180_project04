@@ -21,7 +21,7 @@ if(password_val(pw))
 }  
 }   
 }  
-return false;  
+return false;
 }
 
 function id_val(id)  
@@ -74,7 +74,7 @@ return true;
 
 function password_val(pw)  
 {  
-var format = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/m;
+var format = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
 var pw_len = pw.value.length;  
 if (pw_len == 0)
 {  
